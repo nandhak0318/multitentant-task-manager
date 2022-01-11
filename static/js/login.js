@@ -74,7 +74,7 @@ async function login(email, password) {
     })
     .catch((err) => {
       if (err.response.data.msg) {
-        $('#serror').text(err.response.data.msg)
+        $('#lerror').text(err.response.data.msg)
       }
     })
 }
