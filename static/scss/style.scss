@@ -1,0 +1,21 @@
+// FONTS IMPORT
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// BASICS
+@import './01-basics/normalize';
+@import './01-basics/typography';
+@import './01-basics/basics';
+
+// VENDOR
+
+// COLORS AND VARS
+@import './03-colors_vars/vars';
+
+// COMPONENTS
+@import './04-components/buttons';
+
+// LAYOUT
+
+// pages
+@import './06-pages/login';
+@import './06-pages/index';

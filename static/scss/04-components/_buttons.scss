@@ -1,0 +1,25 @@
+@mixin sc-btn {
+  font-family: $fnt1;
+  font-weight: 700;
+  cursor: pointer;
+  width: 70%;
+  max-width: 300px;
+  padding: 0.4em;
+  color: white;
+  border: 1px solid #f037a5;
+  border-radius: 2em;
+  text-align: center;
+}
+
+@mixin pr-btn {
+  font-family: $fnt1;
+  font-weight: 700;
+  cursor: pointer;
+  width: 70%;
+  max-width: 300px;
+  padding: 0.4em;
+  color: white;
+  background-color: #f037a5;
+  border-radius: 2em;
+  text-align: center;
+}
