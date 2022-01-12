@@ -19,7 +19,7 @@ const login = async (req, res) => {
   if (!email || !password) {
     throw new BadRequestError('please provide email and password')
   }
-  const nEmail = await email.toLowerCase()
+  const nEmail = email.toLowerCase()
   const user = await User.findOne({ email:nEmail })
   if (!user) {
     throw new UnauthenticatedError(`user does'nt exist`)
