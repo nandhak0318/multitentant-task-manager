@@ -8,7 +8,7 @@ const register = async (req, res) => {
     throw new BadRequestError('please provide name, email, password')
   }
   const nEmail = email.toLowerCase()
-  const tempUser = { name, nEmail, password }
+  const tempUser = { name, email:nEmail, password }
   const user = await User.create({ ...tempUser })
   const token = user.createJwt()
   res.status(StatusCodes.CREATED).json({ user: { name: user.name }, token })
@@ -19,8 +19,8 @@ const login = async (req, res) => {
   if (!email || !password) {
     throw new BadRequestError('please provide email and password')
   }
-  const nEmail = email.toLowerCase()
-  const user = await User.findOne({ nEmail })
+  const nEmail = await email.toLowerCase()
+  const user = await User.findOne({ email:nEmail })
   if (!user) {
     throw new UnauthenticatedError(`user does'nt exist`)
   }
